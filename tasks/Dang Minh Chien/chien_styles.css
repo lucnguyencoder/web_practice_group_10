@@ -70,10 +70,9 @@ body {
     text-decoration: none;
     border-radius: 50%;
     font-size: 1.2rem;
-    transition: all 0.3s ease; /* Hiệu ứng chuyển động mượt mà */
+    transition: all 0.3s ease; 
 }
 
-/* Hiệu ứng khi trỏ chuột (Hover) và màu sắc đặc trưng của từng mạng xã hội */
 .social-icons a.fb:hover {
     background-color: #1877F2;
     color: white;
