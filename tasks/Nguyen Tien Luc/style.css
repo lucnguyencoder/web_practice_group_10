@@ -63,7 +63,6 @@ h1 {
   margin-bottom: 15px;
 }
 
-/* CSS cho đoạn Bio giới thiệu */
 .bio {
   max-width: 650px;
   margin: 0 auto 25px auto;
@@ -144,7 +143,7 @@ ul li:hover {
 
 .btn.email {
   background-color: #28a745;
-} /* Xanh lá cây */
+}
 .btn.github {
   background-color: #333;
 }
