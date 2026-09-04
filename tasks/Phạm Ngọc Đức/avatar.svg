@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" width="160" height="160">
+  <!-- Minimalist modern slate portfolio avatar -->
+  <rect width="160" height="160" rx="80" fill="#0f172a" />
+  <!-- Silhouette -->
+  <circle cx="80" cy="62" r="26" fill="#f8fafc" />
+  <path d="M 34 138 C 34 104, 54 94, 80 94 C 106 94, 126 104, 126 138 Z" fill="#f8fafc" />
+</svg>

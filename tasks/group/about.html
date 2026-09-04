@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio Nhóm 10 — Web Practice</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="portfolio-container">
+    <!-- Phần tiêu đề: Hiển thị tên nhóm bằng <h1>, mô tả ngắn bằng <p> -->
+    <header class="hero">
+      <div class="hero-tag">
+        <span class="status-dot"></span>
+        Phenikaa University &bull; Web Engineering
+      </div>
+      <h1>Nhóm 10 — Web Practice </h1>
+      <p>
+        Không gian làm việc và giới thiệu các thành viên Nhóm 10
+        <br>Chúng tôi tập trung vào việc 
+        phát triển giao diện web hiện đại, tối ưu cấu trúc mã nguồn HTML/CSS và mang đến 
+        trải nghiệm người dùng tinh gọn, rõ ràng.<br>
+      </p>
+    </header>
+
+    <!-- Danh sách thành viên: Sử dụng <ul> và <li> để liệt kê -->
+    <section class="portfolio-section">
+      <div class="section-header">
+        <h2 class="section-title">Danh sách thành viên</h2>
+        <span class="section-subtitle">4 thành viên</span>
+      </div>
+      <ul class="roster-list">
+        <li>
+          <span class="member-number">01</span>
+          Nguyễn Tiến Lực <br>(Nhóm trưởng)<br>
+        </li>
+        <li>
+          <span class="member-number">02</span>
+          Đặng Minh Chiến
+        </li>
+        <li>
+          <span class="member-number">03</span>
+          Nguyễn Thủy Tiên
+        </li>
+        <li>
+          <span class="member-number">04</span>
+          Phạm Ngọc Đức
+        </li>
+      </ul>
+    </section>
+
+    <!-- Thông tin chi tiết từng thành viên: Mỗi thành viên trong một <div> có <img>, <h3>, <p>, <a> -->
+    <section class="portfolio-section">
+      <div class="section-header">
+        <h2 class="section-title">Thông tin chi tiết thành viên</h2>
+        <span class="section-subtitle">Hồ sơ cá nhân &amp; vai trò</span>
+      </div>
+      <div class="members-grid">
+
+        <!-- Thành viên 1: Nguyễn Tiến Lực -->
+        <div class="member-card">
+          <div class="member-header">
+            <img src="../Nguyen%20Tien%20Luc/avatar.jpg" alt="Nguyễn Tiến Lực" class="member-avatar">
+            <div class="member-meta">
+              <h3 class="member-name">Nguyễn Tiến Lực</h3>
+              <span class="member-badge">Team Leader</span>
+            </div>
+          </div>
+          <p class="member-bio">
+            <br>Sinh viên Kỹ thuật phần mềm (MSV: 23010862)<br>
+            Phụ trách định hướng kỹ thuật, cấu trúc thư mục, kiến trúc HTML và tổng hợp toàn bộ sản phẩm của nhóm.
+          </p>
+          <a href="../Nguyen%20Tien%20Luc/index.html" class="member-link">
+            Xem trang cá nhân &rarr;
+          </a>
+        </div>
+
+        <!-- Thành viên 2: Đặng Minh Chiến -->
+        <div class="member-card">
+          <div class="member-header">
+            <img src="../Dang%20Minh%20Chien/images/potrait.jpg" alt="Đặng Minh Chiến" class="member-avatar">
+            <div class="member-meta">
+              <h3 class="member-name">Đặng Minh Chiến</h3>
+              <span class="member-badge">Frontend Dev</span>
+            </div>
+          </div>
+          <p class="member-bio">
+            Sinh viên Khoa Công nghệ Thông tin (MSV: 23010866)
+            <br>Phụ trách thiết kế thẻ thành viên, lựa chọn hệ màu trung tính và tối ưu hóa hệ thống lưới CSS Grid &amp; Flexbox.<br>
+          </p>
+          <a href="../Dang%20Minh%20Chien/chien_index.html" class="member-link">
+            Xem trang cá nhân &rarr;
+          </a>
+        </div>
+
+        <!-- Thành viên 3: Nguyễn Thủy Tiên -->
+        <div class="member-card">
+          <div class="member-header">
+            <img src="../Nguyen%20Thuy%20Tien/avatar(1).jpg" alt="Nguyễn Thủy Tiên" class="member-avatar">
+            <div class="member-meta">
+              <h3 class="member-name">Nguyễn Thủy Tiên</h3>
+              <span class="member-badge">UI/UX &amp; Content</span>
+            </div>
+          </div>
+          <p class="member-bio">
+            Sinh viên Thương mại điện tử (MSV: 24104240)<br> Chịu trách nhiệm biên tập nội dung, bố cục bảng phân công công việc và thiết kế trải nghiệm biểu mẫu liên hệ.<br>
+          </p>
+          <a href="../Nguyen%20Thuy%20Tien/index.html" class="member-link">
+            Xem trang cá nhân &rarr;
+          </a>
+        </div>
+
+        <!-- Thành viên 4: Phạm Ngọc Đức -->
+        <div class="member-card">
+          <div class="member-header">
+            <img src="../Ph%E1%BA%A1m%20Ng%E1%BB%8Dc%20%C4%90%E1%BB%A9c/avatar.svg" alt="Phạm Ngọc Đức" class="member-avatar">
+            <div class="member-meta">
+              <h3 class="member-name">Phạm Ngọc Đức</h3>
+              <span class="member-badge">QA &amp; Tester</span>
+            </div>
+          </div>
+          <p class="member-bio">
+            Sinh viên Khoa CNTT - Kỹ thuật phần mềm<br>Đảm nhiệm xây dựng phần tiêu đề, danh sách thành viên, kiểm thử liên kết và đảm bảo độ tương thích trên các kích thước màn hình.<br>
+          </p>
+          <a href="../Ph%E1%BA%A1m%20Ng%E1%BB%8Dc%20%C4%90%E1%BB%A9c/index.html" class="member-link">
+            Xem trang cá nhân &rarr;
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Bảng phân công công việc: Sử dụng <table>, mỗi dòng <tr> gồm Tên thành viên và Nhiệm vụ phụ trách -->
+    <section class="portfolio-section">
+      <div class="section-header">
+        <h2 class="section-title">Bảng phân công công việc</h2>
+        <span class="section-subtitle">Theo dõi tiến độ &amp; vai trò dự án</span>
+      </div>
+      <div class="table-card">
+        <table class="portfolio-table">
+          <thead>
+            <tr>
+              <th style="width: 30%;">Tên thành viên</th>
+              <th>Nhiệm vụ phụ trách</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Nguyễn Tiến Lực (Leader)</td>
+              <td>Khởi tạo repository, thiết kế kiến trúc khung trang HTML chung, phân bổ đầu việc và tích hợp các module vào trang giới thiệu nhóm.</td>
+            </tr>
+            <tr>
+              <td>Đặng Minh Chiến</td>
+              <td>Phát triển thẻ hiển thị thông tin thành viên (Member Cards), viết stylesheet CSS giao diện và kiểm thử tính đáp ứng (Responsive Design).</td>
+            </tr>
+            <tr>
+              <td>Nguyễn Thủy Tiên</td>
+              <td>Xây dựng bảng phân công công việc, soạn thảo nội dung giới thiệu các thành viên và thiết kế giao diện form liên hệ.</td>
+            </tr>
+            <tr>
+              <td>Phạm Ngọc Đức</td>
+              <td>Thiết kế phần tiêu đề (Header), danh sách thành viên, kiểm tra các đường dẫn liên kết cá nhân và rà soát chuẩn ngữ nghĩa HTML5.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Form liên hệ: Tạo <form> gồm Ô nhập tên, Ô nhập email, Nút gửi -->
+    <section class="portfolio-section">
+      <div class="section-header" style="justify-content: center; text-align: center;">
+        <h2 class="section-title">Liên hệ với nhóm</h2>
+      </div>
+      <div class="contact-card">
+        <p class="contact-desc">
+          Bạn có câu hỏi, góp ý hay muốn kết nối học tập cùng Nhóm 10? Hãy gửi thông tin cho chúng tôi bên dưới.
+        </p>
+        <form action="#" method="post">
+          <div class="form-group">
+            <label for="name">Họ và tên</label>
+            <input type="text" id="name" name="name" class="portfolio-input" placeholder="Ví dụ: Nguyễn Văn An" required>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Địa chỉ Email</label>
+            <input type="email" id="email" name="email" class="portfolio-input" placeholder="name@example.com" required>
+          </div>
+
+          <div class="form-group">
+            <input type="submit" value="Gửi thông tin liên hệ" class="portfolio-btn">
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="portfolio-footer">
+      <p>&copy; 2026 Nhóm 10 &bull; Web Practice Project &bull; Trường Đại học Phenikaa</p>
+    </footer>
+  </div>
+
+</body>
+</html>

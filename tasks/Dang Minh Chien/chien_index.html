@@ -1,70 +1,158 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Giới Thiệu Cá Nhân</title>
-    <!-- Nhúng file CSS vào HTML -->
-    <link rel="stylesheet" href="chien_styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Đặng Minh Chiến — Personal Portfolio</title>
+  <!-- Nhúng Stylesheet và FontAwesome Icons -->
+  <link rel="stylesheet" href="chien_styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
-<div class="container">
-    <div class="profile-header">
-        <img src="images/potrait.jpg" alt="Ảnh đại diện">
-        <h1>Đặng Minh Chiến</h1>
-        <p>Mã sinh viên: <strong>23010866</strong></p>
-    </div>
+  <div class="portfolio-wrapper">
+    <!-- Thanh điều hướng trên cùng -->
+    <nav class="top-nav">
+      <a href="../group/about.html" class="back-link">
+        <i class="fas fa-arrow-left"></i>
+        <span>Quay lại trang Nhóm 10</span>
+      </a>
+      <div class="badge-status">
+        <span class="status-dot"></span>
+        <span>Sẵn sàng kết nối &bull; Phenikaa Uni</span>
+      </div>
+    </nav>
 
-<div class="social-icons">
-            <!-- Icon Facebook -->
-            <a href="https://www.facebook.com/minhchien.05" target="_blank" class="fb" title="Facebook của tôi">
-                <i class="fab fa-facebook-f"></i>
-            </a>
-            <!-- Icon GitHub -->
-            <a href="https://github.com/mchienc" target="_blank" class="github" title="GitHub của tôi">
-                <i class="fab fa-github"></i>
-            </a>
-            <!-- Icon Email -->
-            <a href="mailto:dangchien2005@gmail.com" class="email" title="Gửi Email cho tôi">
-                <i class="fas fa-envelope"></i>
-            </a>
-            <!-- Icon Điện thoại -->
-            <a href="tel:0976294907" class="phone" title="Gọi cho tôi">
-                <i class="fas fa-phone-alt"></i>
-            </a>
+    <!-- 1. Thẻ Hero giới thiệu bản thân -->
+    <header class="hero-card">
+      <div class="avatar-container">
+        <img src="images/potrait.jpg" alt="Đặng Minh Chiến" class="avatar-img">
+      </div>
+      <div class="hero-content">
+        <div class="hero-title-row">
+          <h1 class="hero-name">Đặng Minh Chiến</h1>
+          <span class="student-tag">MSV: 23010866</span>
         </div>
-
-    <div class="info-section">
-        <h3>Thông tin cơ bản</h3>
-        <ul class="info-list">
-            <li><strong>Ngày sinh:</strong> 13/03/2005</li>
-            <li><strong>Giới tính:</strong> Nam</li>
-            <li><strong>Mục tiêu:</strong> Trở thành lập trình viên Web Fullstack xuất sắc.</li>
-        </ul>
-    </div>
-
-    <div class="info-section">
-        <h3>Sở thích</h3>
-        <div class="tags">
-            <span>Nghe nhạc</span>
-            <span>Đọc sách</span>
-            <span>Chơi Game</span>
-            <span>Thể thao</span>
+        <p class="hero-subtitle">Frontend Developer &bull; Sinh viên Khoa Công nghệ Thông tin</p>
+        <p class="hero-bio">
+          Xin chào! Mình là Chiến, sinh viên trường Đại học Phenikaa. Đam mê tìm tòi các giải pháp công nghệ web, xây dựng giao diện trực quan và tối ưu trải nghiệm người dùng.
+        </p>
+        
+        <!-- Các liên kết mạng xã hội & liên hệ -->
+        <div class="social-buttons">
+          <a href="https://github.com/mchienc" target="_blank" class="social-btn github" title="GitHub">
+            <i class="fab fa-github"></i>
+            <span>GitHub</span>
+          </a>
+          <a href="https://www.facebook.com/minhchien.05" target="_blank" class="social-btn fb" title="Facebook">
+            <i class="fab fa-facebook-f"></i>
+            <span>Facebook</span>
+          </a>
+          <a href="mailto:dangchien2005@gmail.com" class="social-btn email" title="Email">
+            <i class="fas fa-envelope"></i>
+            <span>Email</span>
+          </a>
+          <a href="tel:0976294907" class="social-btn phone" title="Số điện thoại">
+            <i class="fas fa-phone-alt"></i>
+            <span>0976 294 907</span>
+          </a>
         </div>
+      </div>
+    </header>
+
+    <!-- 2. Lưới Bento Cards hiển thị thông tin -->
+    <div class="bento-grid">
+
+      <!-- Card 1: Thông tin cơ bản -->
+      <section class="bento-card">
+        <div class="card-header">
+          <div class="card-icon">
+            <i class="fas fa-user"></i>
+          </div>
+          <h2 class="card-title">Thông tin cơ bản</h2>
+        </div>
+        <table class="info-table">
+          <tbody>
+            <tr>
+              <td>Họ và tên</td>
+              <td>Đặng Minh Chiến</td>
+            </tr>
+            <tr>
+              <td>Ngày sinh</td>
+              <td>13/03/2005</td>
+            </tr>
+            <tr>
+              <td>Giới tính</td>
+              <td>Nam</td>
+            </tr>
+            <tr>
+              <td>Trường</td>
+              <td>Đại học Phenikaa</td>
+            </tr>
+            <tr>
+              <td>Khoa</td>
+              <td>Công nghệ Thông tin</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- Card 2: Mục tiêu nghề nghiệp -->
+      <section class="bento-card">
+        <div class="card-header">
+          <div class="card-icon">
+            <i class="fas fa-bullseye"></i>
+          </div>
+          <h2 class="card-title">Mục tiêu phát triển</h2>
+        </div>
+        <div class="career-goal-box">
+          <p>
+            <strong>Mục tiêu:</strong> Trở thành lập trình viên <strong>Web Fullstack</strong> xuất sắc, có năng lực xây dựng các sản phẩm phần mềm chất lượng cao, hữu ích và giải quyết các bài toán thực tế.
+          </p>
+        </div>
+      </section>
+
+      <!-- Card 3: Sở trường & Kỹ năng -->
+      <section class="bento-card">
+        <div class="card-header">
+          <div class="card-icon">
+            <i class="fas fa-code"></i>
+          </div>
+          <h2 class="card-title">Sở trường &amp; Kỹ năng</h2>
+        </div>
+        <div class="pills-container">
+          <span class="pill"><i class="fas fa-users"></i> Làm việc nhóm</span>
+          <span class="pill"><i class="fas fa-lightbulb"></i> Giải quyết vấn đề</span>
+          <span class="pill"><i class="fab fa-html5"></i> HTML5 &amp; CSS3</span>
+          <span class="pill"><i class="fab fa-git-alt"></i> Quản lý mã nguồn (Git)</span>
+          <span class="pill"><i class="fas fa-mobile-alt"></i> Responsive Design</span>
+          <span class="pill"><i class="fas fa-language"></i> Tiếng Anh giao tiếp</span>
+        </div>
+      </section>
+
+      <!-- Card 4: Sở thích cá nhân -->
+      <section class="bento-card">
+        <div class="card-header">
+          <div class="card-icon">
+            <i class="fas fa-heart"></i>
+          </div>
+          <h2 class="card-title">Sở thích</h2>
+        </div>
+        <div class="pills-container">
+          <span class="pill"><i class="fas fa-headphones"></i> Nghe nhạc</span>
+          <span class="pill"><i class="fas fa-book-open"></i> Đọc sách công nghệ</span>
+          <span class="pill"><i class="fas fa-gamepad"></i> Chơi Game</span>
+          <span class="pill"><i class="fas fa-running"></i> Thể thao</span>
+        </div>
+      </section>
+
     </div>
 
-    <div class="info-section">
-        <h3>Sở trường & Kỹ năng</h3>
-        <div class="tags">
-            <span>Làm việc nhóm</span>
-            <span>Giải quyết vấn đề</span>
-            <span>HTML/CSS cơ bản</span>
-            <span>Tiếng Anh giao tiếp</span>
-        </div>
-    </div>
-</div>
+    <!-- Chân trang -->
+    <footer class="portfolio-footer">
+      <p>&copy; 2026 Đặng Minh Chiến &bull; Khoa Công nghệ Thông tin &bull; Đại học Phenikaa</p>
+    </footer>
+  </div>
 
 </body>
 </html>

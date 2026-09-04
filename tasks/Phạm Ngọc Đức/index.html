@@ -1,1 +1,142 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Phạm Ngọc Đức — Profile</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background-color: #fafafa;
+      color: #09090b;
+      line-height: 1.6;
+      padding: 40px 20px;
+    }
+    .profile-card {
+      max-width: 580px;
+      margin: 20px auto;
+      background: #ffffff;
+      border: 1px solid #e4e4e7;
+      border-radius: 16px;
+      padding: 36px 32px;
+      box-shadow: 0 4px 12px -2px rgba(0, 0, 0, 0.06);
+    }
+    .profile-top {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      margin-bottom: 24px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid #f4f4f5;
+    }
+    .avatar {
+      width: 76px;
+      height: 76px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 1px solid #e4e4e7;
+    }
+    h1 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      color: #09090b;
+    }
+    .role-badge {
+      display: inline-block;
+      background-color: #f4f4f5;
+      color: #18181b;
+      font-size: 0.8rem;
+      font-weight: 600;
+      padding: 3px 10px;
+      border-radius: 6px;
+      margin-top: 4px;
+    }
+    .info-group {
+      margin-bottom: 24px;
+    }
+    .info-group h2 {
+      font-size: 0.85rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      color: #71717a;
+      margin-bottom: 12px;
+    }
+    .info-list {
+      list-style-type: none;
+    }
+    .info-list li {
+      padding: 8px 0;
+      border-bottom: 1px solid #f4f4f5;
+      font-size: 0.95rem;
+      color: #3f3f46;
+      display: flex;
+      justify-content: space-between;
+    }
+    .info-list li span:first-child {
+      color: #71717a;
+      font-weight: 500;
+    }
+    .info-list li span:last-child {
+      font-weight: 600;
+      color: #09090b;
+    }
+    .back-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: #09090b;
+      background: #f4f4f5;
+      border: 1px solid #e4e4e7;
+      padding: 10px 18px;
+      border-radius: 8px;
+      transition: all 0.2s;
+      margin-top: 10px;
+    }
+    .back-btn:hover {
+      background: #18181b;
+      color: #ffffff;
+      border-color: #18181b;
+    }
+  </style>
+</head>
+<body>
+  <div class="profile-card">
+    <div class="profile-top">
+      <img src="./avatar.svg" alt="Phạm Ngọc Đức" class="avatar">
+      <div>
+        <h1>Phạm Ngọc Đức</h1>
+        <span class="role-badge">QA &amp; Tester &bull; Nhóm 10</span>
+      </div>
+    </div>
 
+    <div class="info-group">
+      <h2>Thông tin cơ bản</h2>
+      <ul class="info-list">
+        <li><span>Trường</span> <span>Đại học Phenikaa</span></li>
+        <li><span>Khoa</span> <span>Công nghệ Thông tin</span></li>
+        <li><span>Chuyên ngành</span> <span>Kỹ thuật phần mềm</span></li>
+        <li><span>Giới tính</span> <span>Nam</span></li>
+      </ul>
+    </div>
+
+    <div class="info-group">
+      <h2>Kỹ năng &amp; Sở thích</h2>
+      <ul class="info-list">
+        <li><span>Kỹ năng</span> <span>HTML5, CSS3, Git, Testing</span></li>
+        <li><span>Sở thích</span> <span>Bóng đá, đọc sách công nghệ</span></li>
+      </ul>
+    </div>
+
+    <a href="../group/about.html" class="back-btn">&larr; Quay lại trang Nhóm 10</a>
+  </div>
+</body>
+</html>
