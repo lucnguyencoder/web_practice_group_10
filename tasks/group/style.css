@@ -1,8 +1,3 @@
-/* ==========================================================================
-   VIBRANT MODERN PORTFOLIO THEME — NHÓM 10
-   Giao diện Portfolio hiện đại, sinh động với Ambient Aurora & Dot-Grid Background
-   100% Thuần CSS3 (Không dùng JavaScript)
-   ========================================================================== */
 
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
 
@@ -214,7 +209,10 @@ body::after {
   align-items: center;
   gap: 12px;
   box-shadow: var(--shadow-sm);
-  transition: var(--transition);
+  transition: background-color 0.25s ease;
+  will-change: transform, box-shadow;
+  cursor: pointer;
+  user-select: none;
 }
 
 .roster-list li .member-number {
@@ -231,10 +229,7 @@ body::after {
 }
 
 .roster-list li:hover {
-  border-color: #2563eb;
   background: #ffffff;
-  box-shadow: 0 8px 20px -2px rgba(37, 99, 235, 0.12);
-  transform: translateY(-2px);
 }
 
 /* 4. Thông tin chi tiết từng thành viên (Portfolio Bento Cards 2 Cột) */
@@ -242,6 +237,7 @@ body::after {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 24px;
+  perspective: 1200px;
 }
 
 .member-card {
@@ -254,7 +250,9 @@ body::after {
   display: flex;
   flex-direction: column;
   box-shadow: var(--shadow-md);
-  transition: var(--transition);
+  transition: border-color 0.25s ease, background 0.25s ease, box-shadow 0.25s ease;
+  transform-style: preserve-3d;
+  will-change: transform, opacity;
   position: relative;
   overflow: hidden;
 }
@@ -269,13 +267,12 @@ body::after {
   height: 3px;
   background: var(--accent-gradient);
   opacity: 0;
-  transition: var(--transition);
+  transition: opacity 0.25s ease;
 }
 
 .member-card:hover {
   border-color: var(--border-hover);
   box-shadow: var(--shadow-lg);
-  transform: translateY(-4px);
   background: rgba(255, 255, 255, 0.96);
 }
 
@@ -299,12 +296,7 @@ body::after {
   box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
   background-color: var(--bg-subtle);
   flex-shrink: 0;
-  transition: var(--transition);
-}
-
-.member-card:hover .member-avatar {
-  transform: scale(1.05);
-  box-shadow: 0 6px 20px rgba(37, 99, 235, 0.22);
+  will-change: transform;
 }
 
 .member-meta {
@@ -367,6 +359,11 @@ body::after {
   transform: translateY(-2px);
 }
 
+.member-link .arrow {
+  display: inline-block;
+  will-change: transform;
+}
+
 /* 5. Bảng phân công công việc (Modern Glass Table) */
 .table-card {
   background: var(--bg-glass-card);
@@ -376,6 +373,7 @@ body::after {
   border-radius: var(--radius-lg);
   overflow: hidden;
   box-shadow: var(--shadow-md);
+  will-change: transform, opacity;
 }
 
 .portfolio-table {

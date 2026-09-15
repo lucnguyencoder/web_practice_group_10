@@ -15,12 +15,10 @@
         <span class="status-dot"></span>
         Phenikaa University &bull; Web Engineering
       </div>
-      <h1>Nhóm 10 — Web Practice </h1>
+      <h1>Nhóm 10 — Web Practice</h1>
       <p>
-        Không gian làm việc và giới thiệu các thành viên Nhóm 10
-        <br>Chúng tôi tập trung vào việc 
-        phát triển giao diện web hiện đại, tối ưu cấu trúc mã nguồn HTML/CSS và mang đến 
-        trải nghiệm người dùng tinh gọn, rõ ràng.<br>
+        Không gian làm việc và giới thiệu các thành viên Nhóm 10.
+        Chúng tôi tập trung vào việc phát triển giao diện web hiện đại, tối ưu cấu trúc mã nguồn HTML/CSS và mang đến trải nghiệm người dùng tinh gọn, sống động và rõ ràng.
       </p>
     </header>
 
@@ -31,19 +29,19 @@
         <span class="section-subtitle">4 thành viên</span>
       </div>
       <ul class="roster-list">
-        <li>
+        <li data-index="0" title="Click hoặc hover để xem chi tiết">
           <span class="member-number">01</span>
           Nguyễn Tiến Lực <br>(Nhóm trưởng)<br>
         </li>
-        <li>
+        <li data-index="1" title="Click hoặc hover để xem chi tiết">
           <span class="member-number">02</span>
           Đặng Minh Chiến
         </li>
-        <li>
+        <li data-index="2" title="Click hoặc hover để xem chi tiết">
           <span class="member-number">03</span>
           Nguyễn Thủy Tiên
         </li>
-        <li>
+        <li data-index="3" title="Click hoặc hover để xem chi tiết">
           <span class="member-number">04</span>
           Phạm Ngọc Đức
         </li>
@@ -59,7 +57,7 @@
       <div class="members-grid">
 
         <!-- Thành viên 1: Nguyễn Tiến Lực -->
-        <div class="member-card">
+        <div class="member-card" id="member-card-0" data-index="0">
           <div class="member-header">
             <img src="../Nguyen%20Tien%20Luc/avatar.jpg" alt="Nguyễn Tiến Lực" class="member-avatar">
             <div class="member-meta">
@@ -72,12 +70,12 @@
             Phụ trách định hướng kỹ thuật, cấu trúc thư mục, kiến trúc HTML và tổng hợp toàn bộ sản phẩm của nhóm.
           </p>
           <a href="../Nguyen%20Tien%20Luc/index.html" class="member-link">
-            Xem trang cá nhân &rarr;
+            Xem trang cá nhân <span class="arrow">&rarr;</span>
           </a>
         </div>
 
         <!-- Thành viên 2: Đặng Minh Chiến -->
-        <div class="member-card">
+        <div class="member-card" id="member-card-1" data-index="1">
           <div class="member-header">
             <img src="../Dang%20Minh%20Chien/images/potrait.jpg" alt="Đặng Minh Chiến" class="member-avatar">
             <div class="member-meta">
@@ -90,12 +88,12 @@
             <br>Phụ trách thiết kế thẻ thành viên, lựa chọn hệ màu trung tính và tối ưu hóa hệ thống lưới CSS Grid &amp; Flexbox.<br>
           </p>
           <a href="../Dang%20Minh%20Chien/chien_index.html" class="member-link">
-            Xem trang cá nhân &rarr;
+            Xem trang cá nhân <span class="arrow">&rarr;</span>
           </a>
         </div>
 
         <!-- Thành viên 3: Nguyễn Thủy Tiên -->
-        <div class="member-card">
+        <div class="member-card" id="member-card-2" data-index="2">
           <div class="member-header">
             <img src="../Nguyen%20Thuy%20Tien/avatar(1).jpg" alt="Nguyễn Thủy Tiên" class="member-avatar">
             <div class="member-meta">
@@ -107,12 +105,12 @@
             Sinh viên Thương mại điện tử (MSV: 24104240)<br> Chịu trách nhiệm biên tập nội dung, bố cục bảng phân công công việc và thiết kế trải nghiệm biểu mẫu liên hệ.<br>
           </p>
           <a href="../Nguyen%20Thuy%20Tien/index.html" class="member-link">
-            Xem trang cá nhân &rarr;
+            Xem trang cá nhân <span class="arrow">&rarr;</span>
           </a>
         </div>
 
         <!-- Thành viên 4: Phạm Ngọc Đức -->
-        <div class="member-card">
+        <div class="member-card" id="member-card-3" data-index="3">
           <div class="member-header">
             <img src="../Ph%E1%BA%A1m%20Ng%E1%BB%8Dc%20%C4%90%E1%BB%A9c/avatar.svg" alt="Phạm Ngọc Đức" class="member-avatar">
             <div class="member-meta">
@@ -124,7 +122,7 @@
             Sinh viên Khoa CNTT - Kỹ thuật phần mềm<br>Đảm nhiệm xây dựng phần tiêu đề, danh sách thành viên, kiểm thử liên kết và đảm bảo độ tương thích trên các kích thước màn hình.<br>
           </p>
           <a href="../Ph%E1%BA%A1m%20Ng%E1%BB%8Dc%20%C4%90%E1%BB%A9c/index.html" class="member-link">
-            Xem trang cá nhân &rarr;
+            Xem trang cá nhân <span class="arrow">&rarr;</span>
           </a>
         </div>
 
@@ -200,5 +198,10 @@
     </footer>
   </div>
 
+  <!-- GSAP 3 & ScrollTrigger CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <!-- Main GSAP Animation Script -->
+  <script src="script.js"></script>
 </body>
 </html>
