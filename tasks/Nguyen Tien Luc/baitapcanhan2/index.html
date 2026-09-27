@@ -1,1 +1,332 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quản Lý Điểm Sinh Viên - Tính Điểm & Xếp Loại</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="background-decorations">
+      <div class="circle circle-1"></div>
+      <div class="circle circle-2"></div>
+      <div class="circle circle-3"></div>
+    </div>
+
+    <div class="container">
+      <!-- Header -->
+      <header class="main-header">
+        <div class="header-badge">
+          <i class="fa-solid fa-graduation-cap"></i> Hệ Thống Đánh Giá Học Tập
+        </div>
+        <h1>BẢNG ĐIỂM & XẾP LOẠI HỌC TẬP</h1>
+      </header>
+
+      <div class="grid-layout">
+        <!-- Form Card -->
+        <section class="card form-card">
+          <div class="card-header">
+            <h2><i class="fa-solid fa-user-pen"></i> Thông Tin & Điểm Số</h2>
+            <button
+              type="button"
+              id="btn-quick-fill"
+              class="btn-text"
+              title="Điền dữ liệu mẫu để thử nghiệm"
+            >
+              <i class="fa-solid fa-wand-magic-sparkles"></i> Dữ liệu mẫu
+            </button>
+          </div>
+
+          <form id="score-form" novalidate>
+            <!-- Tên sinh viên -->
+            <div class="form-group">
+              <label for="student-name">
+                <i class="fa-solid fa-user"></i> Họ và tên sinh viên
+                <span class="required">*</span>
+              </label>
+              <div class="input-wrapper">
+                <input
+                  type="text"
+                  id="student-name"
+                  name="studentName"
+                  placeholder="Ví dụ: Nguyễn Văn An"
+                  autocomplete="off"
+                />
+                <i class="fa-solid fa-circle-exclamation error-icon"></i>
+              </div>
+              <span class="error-msg" id="student-name-error"></span>
+            </div>
+
+            <div class="section-divider">
+              <span
+                ><i class="fa-solid fa-book-open"></i> Điểm 5 môn học (Thang
+                điểm 0 - 10)</span
+              >
+            </div>
+
+            <!-- Danh sách 5 môn học -->
+            <div class="subjects-grid">
+              <!-- Môn 1 -->
+              <div class="form-group subject-group">
+                <label for="score-1">
+                  <span class="subject-index">1</span>
+                  <span class="subject-name">Giải tích 1</span>
+                  <span class="required">*</span>
+                </label>
+                <div class="input-wrapper">
+                  <input
+                    type="number"
+                    id="score-1"
+                    name="score_0"
+                    min="0"
+                    max="10"
+                    step="0.1"
+                    placeholder="0.0 - 10.0"
+                  />
+                  <i class="fa-solid fa-circle-exclamation error-icon"></i>
+                </div>
+                <span class="error-msg" id="score-1-error"></span>
+              </div>
+
+              <!-- Môn 2 -->
+              <div class="form-group subject-group">
+                <label for="score-2">
+                  <span class="subject-index">2</span>
+                  <span class="subject-name">Đại số tuyến tính</span>
+                  <span class="required">*</span>
+                </label>
+                <div class="input-wrapper">
+                  <input
+                    type="number"
+                    id="score-2"
+                    name="score_1"
+                    min="0"
+                    max="10"
+                    step="0.1"
+                    placeholder="0.0 - 10.0"
+                  />
+                  <i class="fa-solid fa-circle-exclamation error-icon"></i>
+                </div>
+                <span class="error-msg" id="score-2-error"></span>
+              </div>
+
+              <!-- Môn 3 -->
+              <div class="form-group subject-group">
+                <label for="score-3">
+                  <span class="subject-index">3</span>
+                  <span class="subject-name">Xác xuất thống kê</span>
+                  <span class="required">*</span>
+                </label>
+                <div class="input-wrapper">
+                  <input
+                    type="number"
+                    id="score-3"
+                    name="score_2"
+                    min="0"
+                    max="10"
+                    step="0.1"
+                    placeholder="0.0 - 10.0"
+                  />
+                  <i class="fa-solid fa-circle-exclamation error-icon"></i>
+                </div>
+                <span class="error-msg" id="score-3-error"></span>
+              </div>
+
+              <!-- Môn 4 -->
+              <div class="form-group subject-group">
+                <label for="score-4">
+                  <span class="subject-index">4</span>
+                  <span class="subject-name">Tin học đại cương</span>
+                  <span class="required">*</span>
+                </label>
+                <div class="input-wrapper">
+                  <input
+                    type="number"
+                    id="score-4"
+                    name="score_3"
+                    min="0"
+                    max="10"
+                    step="0.1"
+                    placeholder="0.0 - 10.0"
+                  />
+                  <i class="fa-solid fa-circle-exclamation error-icon"></i>
+                </div>
+                <span class="error-msg" id="score-4-error"></span>
+              </div>
+
+              <!-- Môn 5 -->
+              <div class="form-group subject-group subject-full">
+                <label for="score-5">
+                  <span class="subject-index">5</span>
+                  <span class="subject-name">Xây dựng ứng dụng Web</span>
+                  <span class="required">*</span>
+                </label>
+                <div class="input-wrapper">
+                  <input
+                    type="number"
+                    id="score-5"
+                    name="score_4"
+                    min="0"
+                    max="10"
+                    step="0.1"
+                    placeholder="0.0 - 10.0"
+                  />
+                  <i class="fa-solid fa-circle-exclamation error-icon"></i>
+                </div>
+                <span class="error-msg" id="score-5-error"></span>
+              </div>
+            </div>
+
+            <!-- Alert message box for global form validation -->
+            <div id="general-alert" class="alert hidden">
+              <i class="fa-solid fa-triangle-exclamation"></i>
+              <span id="general-alert-text"></span>
+            </div>
+
+            <!-- Action buttons -->
+            <div class="form-actions">
+              <button type="submit" id="btn-calculate" class="btn btn-primary">
+                <i class="fa-solid fa-calculator"></i> Tính kết quả
+              </button>
+              <button type="button" id="btn-reset" class="btn btn-secondary">
+                <i class="fa-solid fa-rotate-left"></i> Nhập lại
+              </button>
+            </div>
+          </form>
+        </section>
+
+        <!-- Result Card -->
+        <section class="card result-card" id="result-card">
+          <!-- Placeholder when no result calculated yet -->
+          <div id="result-placeholder" class="result-placeholder">
+            <div class="placeholder-icon">
+              <i class="fa-solid fa-chart-simple"></i>
+            </div>
+            <h3>Chưa có kết quả</h3>
+            <p>
+              Vui lòng điền thông tin và bấm <strong>"Tính kết quả"</strong> để
+              xem bảng điểm và xếp loại học tập.
+            </p>
+
+            <div class="rules-card">
+              <h4>
+                <i class="fa-solid fa-circle-info"></i> Quy tắc xếp loại học
+                tập:
+              </h4>
+              <ul>
+                <li>
+                  <span class="badge badge-sm badge-gioi">≥ 8.0</span> Giỏi
+                </li>
+                <li><span class="badge badge-sm badge-kha">≥ 6.5</span> Khá</li>
+                <li>
+                  <span class="badge badge-sm badge-tb">≥ 5.0</span> Trung bình
+                </li>
+                <li>
+                  <span class="badge badge-sm badge-yeu">&lt; 5.0</span> Yếu
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Actual Results (hidden by default) -->
+          <div id="result-content" class="result-content hidden">
+            <div class="card-header">
+              <h2><i class="fa-solid fa-award"></i> Kết Quả Đánh Giá</h2>
+              <span class="status-tag"
+                ><i class="fa-solid fa-check"></i> Đã tính toán</span
+              >
+            </div>
+
+            <!-- Student Profile Highlight -->
+            <div class="student-highlight">
+              <div class="student-avatar">
+                <i class="fa-solid fa-user-graduate"></i>
+              </div>
+              <div class="student-meta">
+                <span class="meta-label">Sinh viên</span>
+                <h3 id="display-student-name">--</h3>
+                <span class="meta-date" id="display-date"></span>
+              </div>
+            </div>
+
+            <!-- Summary Stats: Điểm trung bình & Xếp loại -->
+            <div class="summary-stats">
+              <div class="stat-box average-box">
+                <div class="stat-icon">
+                  <i class="fa-solid fa-chart-line"></i>
+                </div>
+                <div class="stat-info">
+                  <span class="stat-label">ĐIỂM TRUNG BÌNH</span>
+                  <div class="stat-value" id="display-average">0.00</div>
+                  <span class="stat-scale">Thang điểm 10</span>
+                </div>
+              </div>
+
+              <div class="stat-box rank-box" id="rank-stat-box">
+                <div class="stat-icon" id="rank-stat-icon">
+                  <i class="fa-solid fa-medal"></i>
+                </div>
+                <div class="stat-info">
+                  <span class="stat-label">XẾP LOẠI HỌC TẬP</span>
+                  <div class="stat-value" id="display-rank">--</div>
+                  <span class="stat-scale" id="display-rank-desc"
+                    >Đánh giá chung</span
+                  >
+                </div>
+              </div>
+            </div>
+
+            <!-- Detailed Scores Table -->
+            <div class="table-container">
+              <h4 class="table-title">
+                <i class="fa-solid fa-list-check"></i> Bảng điểm chi tiết từng
+                môn
+              </h4>
+              <table class="score-table">
+                <thead>
+                  <tr>
+                    <th class="col-stt">STT</th>
+                    <th>Môn học</th>
+                    <th class="col-score">Điểm số</th>
+                    <th class="col-status">Trạng thái</th>
+                  </tr>
+                </thead>
+                <tbody id="scores-table-body">
+                  <!-- Generated by JS -->
+                </tbody>
+                <tfoot>
+                  <tr>
+                    <td colspan="2" class="total-label">
+                      Điểm trung bình (ĐTB):
+                    </td>
+                    <td class="total-score" id="table-footer-average">0.00</td>
+                    <td id="table-footer-rank">
+                      <span class="badge" id="table-rank-badge">--</span>
+                    </td>
+                  </tr>
+                </tfoot>
+              </table>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <!-- Custom Script -->
+    <script src="script.js"></script>
+  </body>
+</html>
 
